@@ -18,9 +18,9 @@ namespace T4Box
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+    #line 1 "C:\Git\Kasta\T4Box\T4Box\ReadOnlyClass.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "12.0.0.0")]
-    public partial class ClassWithArgumentsTemplate : ClassWithArgumentsTemplateBase
+    public partial class ReadOnlyClass : ReadOnlyClassBase
     {
 #line hidden
         /// <summary>
@@ -30,43 +30,34 @@ namespace T4Box
         {
             this.Write("namespace ");
             
-            #line 6 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+            #line 11 "C:\Git\Kasta\T4Box\T4Box\ReadOnlyClass.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(NameSpaceName));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n    class ");
             
-            #line 8 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+            #line 13 "C:\Git\Kasta\T4Box\T4Box\ReadOnlyClass.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write("\r\n    {\r\n        private readonly bool _value = ");
+            this.Write("\r\n    {\r\n        private readonly int _value;\r\n\r\n        public ");
             
-            #line 10 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Value));
-            
-            #line default
-            #line hidden
-            this.Write(";\r\n\r\n        public ");
-            
-            #line 12 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+            #line 17 "C:\Git\Kasta\T4Box\T4Box\ReadOnlyClass.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
-            this.Write("()\r\n        {\r\n        }\r\n\r\n        public bool Value\r\n        {\r\n            get" +
-                    "\r\n            {\r\n                return _value;\r\n            }\r\n        }\r\n    }" +
-                    "\r\n}");
+            this.Write("()\r\n        {\r\n            _value = 5;\r\n        }\r\n\r\n        public int Value\r\n  " +
+                    "      {\r\n            get\r\n            {\r\n                return _value;\r\n       " +
+                    "     }\r\n        }\r\n    }\r\n}");
             return this.GenerationEnvironment.ToString();
         }
 
-        public bool Value { get; set; }
+        public object ClassName { get; set; }
 
-        public string ClassName { get; set; }
-
-        public string NameSpaceName { get; set; }
+        public object NameSpaceName { get; set; }
     }
     
     #line default
@@ -76,7 +67,7 @@ namespace T4Box
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "12.0.0.0")]
-    public class ClassWithArgumentsTemplateBase
+    public class ReadOnlyClassBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

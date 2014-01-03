@@ -22,6 +22,7 @@ namespace T4Box
             var template = new ClassWithArgumentsTemplate();
             template.ClassName = "MyClass";
             template.NameSpaceName = "MyNs";
+            template.Value = false;
             Console.Write(template.TransformText());
         }
     }
