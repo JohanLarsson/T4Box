@@ -20,12 +20,8 @@ namespace T4Box
         public void WriteCustomizedClassTest()
         {
             var template = new ClassWithArgumentsTemplate();
-            var session = new Dictionary<string, object>
-            {
-                {"namespacename", "MyNs"},
-                {"classname", "MyClass"}
-            };
-            template.Session = session;
+            template.ClassName = "MyClass";
+            template.NameSpaceName = "MyNs";
             Console.Write(template.TransformText());
         }
     }

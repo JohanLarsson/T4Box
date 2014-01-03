@@ -74,6 +74,9 @@ namespace T4Box
         private global::System.Collections.Generic.IDictionary<string, object> sessionField;
         #endregion
         #region Properties
+
+        public string ClassName { get; set; }
+        public string NameSpaceName { get; set; }
         /// <summary>
         /// The string builder that generation-time code is using to assemble generated output
         /// </summary>
