@@ -15,5 +15,18 @@ namespace T4Box
             var template = new SimpleClassTemplate();
             Console.Write(template.TransformText());
         }
+
+        [Test]
+        public void WriteCustomizedClassTest()
+        {
+            var template = new ClassWithArgumentsTemplate();
+            var session = new Dictionary<string, object>
+            {
+                {"namespacename", "MyNs"},
+                {"classname", "MyClass"}
+            };
+            template.Session = session;
+            Console.Write(template.TransformText());
+        }
     }
 }

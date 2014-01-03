@@ -43,6 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassGenerator.cs" />
+    <Compile Include="ClassWithArgumentsTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassWithArgumentsTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DummyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleClassTemplate1.cs">
       <AutoGen>True</AutoGen>
@@ -51,6 +57,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassWithArgumentsTemplate.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ClassWithArgumentsTemplate.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="SimpleClassTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
