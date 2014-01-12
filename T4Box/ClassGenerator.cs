@@ -7,23 +7,32 @@ using NUnit.Framework;
 
 namespace T4Box
 {
+    using Templates;
+
     public class ClassGenerator
     {
         [Test]
-        public void WriteClassWithoutArgumentsTest()
+        public void SimpleClassTemplate()
         {
             var template = new SimpleClassTemplate();
             Console.Write(template.TransformText());
         }
 
         [Test]
-        public void WriteCustomizedClassTest()
+        public void DynamicTemplate_TransformText()
         {
-            var template = new ClassWithArgumentsTemplate();
+            var template = new DynamicTemplate();
             template.ClassName = "MyClass";
             template.NameSpaceName = "MyNs";
-            template.Value = false;
+            template.Value = false.ToString().ToLower();
             Console.Write(template.TransformText());
+        }
+
+        [Test]
+        public void DynamicTemplate_WriteCode()
+        {
+            var template = new DynamicTemplate();
+            Console.Write(template.WriteCode(false,"MyClass", "ns"));
         }
     }
 }

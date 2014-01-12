@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace T4Box
+namespace Templates
 {
     using System.Linq;
     using System.Text;
@@ -18,9 +18,9 @@ namespace T4Box
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+    #line 1 "C:\Git\Kasta\T4Box\Templates\DynamicTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "12.0.0.0")]
-    public partial class ClassWithArgumentsTemplate : ClassWithArgumentsTemplateBase
+    public partial class DynamicTemplate : DynamicTemplateBase
     {
 #line hidden
         /// <summary>
@@ -30,38 +30,56 @@ namespace T4Box
         {
             this.Write("namespace ");
             
-            #line 6 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+            #line 6 "C:\Git\Kasta\T4Box\Templates\DynamicTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(NameSpaceName));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n    class ");
             
-            #line 8 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+            #line 8 "C:\Git\Kasta\T4Box\Templates\DynamicTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write("\r\n    {\r\n        private readonly bool _value = ");
             
-            #line 10 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+            #line 10 "C:\Git\Kasta\T4Box\Templates\DynamicTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Value));
             
             #line default
             #line hidden
             this.Write(";\r\n\r\n        public ");
             
-            #line 12 "C:\Git\Kasta\T4Box\T4Box\ClassWithArgumentsTemplate.tt"
+            #line 12 "C:\Git\Kasta\T4Box\Templates\DynamicTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write("()\r\n        {\r\n        }\r\n\r\n        public bool Value\r\n        {\r\n            get" +
                     "\r\n            {\r\n                return _value;\r\n            }\r\n        }\r\n    }" +
-                    "\r\n}");
+                    "\r\n}\r\n");
             return this.GenerationEnvironment.ToString();
         }
+        
+        #line 25 "C:\Git\Kasta\T4Box\Templates\DynamicTemplate.tt"
 
+        public string Value { get; set; }
+        public string ClassName { get; set; }
+        public string NameSpaceName { get; set; }
+
+		public string WriteCode(bool value, string className, string nameSpaceName)
+        {
+            Value = value.ToString().ToLower();
+            ClassName = className;
+            NameSpaceName = nameSpaceName;
+            GenerationEnvironment.Clear();
+            return TransformText();
+        }
+
+        
+        #line default
+        #line hidden
     }
     
     #line default
@@ -71,7 +89,7 @@ namespace T4Box
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "12.0.0.0")]
-    public class ClassWithArgumentsTemplateBase
+    public class DynamicTemplateBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
@@ -82,9 +100,6 @@ namespace T4Box
         private global::System.Collections.Generic.IDictionary<string, object> sessionField;
         #endregion
         #region Properties
-        public bool Value { get; set; }
-        public string ClassName { get; set; }
-        public string NameSpaceName { get; set; }
         /// <summary>
         /// The string builder that generation-time code is using to assemble generated output
         /// </summary>

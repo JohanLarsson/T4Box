@@ -22,3 +22,17 @@ namespace <#=NameSpaceName#>
         }
     }
 }
+<#+
+        public string Value { get; set; }
+        public string ClassName { get; set; }
+        public string NameSpaceName { get; set; }
+
+		public string WriteCode(bool value, string className, string nameSpaceName)
+        {
+            Value = value.ToString().ToLower();
+            ClassName = className;
+            NameSpaceName = nameSpaceName;
+            GenerationEnvironment.Clear();
+            return TransformText();
+        }
+#>
