@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Box", "T4Box\T4Box.csproj", "{57D16A5B-7545-48FE-8600-19318F383D7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "Templates\Templates.csproj", "{1D824F58-B3F7-40B9-8545-6B999ED84AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Box.UI", "T4Box.UI\T4Box.UI.csproj", "{3209C3E9-6F36-4ABA-80AB-4EF404156081}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +21,10 @@ Global
 		{1D824F58-B3F7-40B9-8545-6B999ED84AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D824F58-B3F7-40B9-8545-6B999ED84AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D824F58-B3F7-40B9-8545-6B999ED84AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3209C3E9-6F36-4ABA-80AB-4EF404156081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3209C3E9-6F36-4ABA-80AB-4EF404156081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3209C3E9-6F36-4ABA-80AB-4EF404156081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3209C3E9-6F36-4ABA-80AB-4EF404156081}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
