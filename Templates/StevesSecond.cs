@@ -8,5 +8,6 @@ namespace Templates
 {
     class StevesSecond
     {
+        // added comments
     }
 }
