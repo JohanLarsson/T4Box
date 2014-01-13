@@ -8,5 +8,6 @@ namespace Templates
 {
     class MainBranch
     {
+        // added comments
     }
 }
